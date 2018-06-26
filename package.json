@@ -1,8 +1,8 @@
 {
-  "name": "Home Automation",
-  "description": "Your house in a tap",
+  "name": "homeautomation",
   "version": "0.0.1",
-  "author": "SteelMan",
+  "author": "SteelMan <Concetto Pollicina>",
+  "description": "Your house in a tap",
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
@@ -32,6 +32,16 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.10",
-    "typescript": "~2.6.2"
+    "typescript": "2.6.2",
+    "codelyzer": "4.2.1"
+  },
+  "config": {
+    "ionic_bundler": "webpack",
+    "ionic_app_ng_module_path": "./src/app/module.ts",
+    "ionic_sass": "./config/sass.config.js",
+    "ionic_uglifyjs": "./config/uglifyjs.config.js",
+    "ionic_webpack": "./config/webpack.config.js",
+    "ionic_copy": "./config/copy.config.js",
+    "ionic_source_map_type": "#inline-source-map"
   }
 }

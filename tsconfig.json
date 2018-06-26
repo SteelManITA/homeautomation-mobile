@@ -4,6 +4,8 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "removeComments": true,
     "lib": [
       "dom",
       "es2015"
@@ -11,7 +13,16 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5"
+    // "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "target": "es5",
+    "baseUrl": "src",
+    "rootDir": ".",
+    "paths": {
+      "@app/*": [ "app/*" ],
+      "@env/*": [ "environments/*" ],
+      "@theme/*": [ "theme/*" ],
+    }
   },
   "include": [
     "src/**/*.ts"
