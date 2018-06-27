@@ -3,7 +3,10 @@
 // then provide an object with a `src` array of globs and a `dest` string
 module.exports = {
   copyAssets: {
-    src: ['{{SRC}}/themes/ionic/assets/**/*'],
+    src: [
+      '{{SRC}}/theme/assets/**/*',
+      '{{SRC}}/assets/**/*',
+    ],
     dest: '{{WWW}}/assets'
   },
   copyIndexContent: {
@@ -21,10 +24,6 @@ module.exports = {
   copySwToolbox: {
     src: ['{{ROOT}}/node_modules/sw-toolbox/sw-toolbox.js'],
     dest: '{{BUILD}}'
-  },
-  copyLeaflet: {
-     src: ['{{ROOT}}/node_modules/leaflet/dist/*', '{{ROOT}}/node_modules/leaflet/dist/**/*'],
-     dest: '{{BUILD}}/leaflet'
   }
 }
 

@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 
 import { IonicModule } from 'ionic-angular';
-import { ComponentsModule } from './../components/module';
+import { ComponentsModule } from '@theme/components/module';
 
-import { AboutPage } from '@theme/views/about/about';
-import { ContactPage } from '@theme/views/contact/contact';
-import { HomePage } from '@theme/views/home/home';
+import { I18nPipe } from '@app/pipes';
+
+import { LoaderPage } from '@theme/views/loader/loader';
 import { TabsPage } from '@theme/views/tabs/tabs';
+import { HomePage } from '@theme/views/home/home';
+import { AutomationPage } from '@theme/views/automation/automation';
+import { SettingsPage } from '@theme/views/settings/settings';
 
 @NgModule({
   imports: [
@@ -14,16 +17,19 @@ import { TabsPage } from '@theme/views/tabs/tabs';
     ComponentsModule,
   ],
   declarations: [
-    AboutPage,
-    ContactPage,
-    HomePage,
+    I18nPipe,
+    LoaderPage,
     TabsPage,
+    HomePage,
+    AutomationPage,
+    SettingsPage,
   ],
   entryComponents: [
-    AboutPage,
-    ContactPage,
-    HomePage,
+    LoaderPage,
     TabsPage,
+    HomePage,
+    AutomationPage,
+    SettingsPage,
   ],
   providers: [
   ],

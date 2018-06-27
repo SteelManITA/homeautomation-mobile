@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
+import { I18nService, DataService } from '@app/services';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -14,7 +16,8 @@ import { ThemeModule } from '@theme/module';
   imports: [
     BrowserModule,
     ThemeModule,
-    IonicModule.forRoot(AppComponent)
+    IonicModule.forRoot(AppComponent),
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -23,7 +26,12 @@ import { ThemeModule } from '@theme/module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {
+      provide: ErrorHandler,
+      useClass: IonicErrorHandler
+    },
+    I18nService,
+    DataService,
   ]
 })
 export class AppModule {}
