@@ -3,7 +3,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { LoaderPage } from '@theme/views/loader/loader';
+import { LoaderPage } from '@theme/views/loader/page';
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>'

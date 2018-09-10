@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 
 import { I18nService } from '@app/services';
 
-import { HomePage } from '@theme/views/home/home';
-import { AutomationPage } from '@theme/views/automation/automation';
-import { SettingsPage } from '@theme/views/settings/settings';
+import { HomePage } from '@theme/views/tabs/home/page';
+import { AutomationPage } from '@theme/views/tabs/automation/page';
+import { SettingsPage } from '@theme/views/tabs/settings/page';
 
 export interface BottomNavigationDestination
 {
@@ -16,7 +16,7 @@ export interface BottomNavigationDestination
 
 @Component({
   selector: 'tabs-page',
-  templateUrl: 'tabs.html'
+  templateUrl: 'page.html'
 })
 export class TabsPage {
   public destinations: BottomNavigationDestination[];

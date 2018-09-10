@@ -1,13 +1,14 @@
+import { ENV } from '@env/environment';
 import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { I18nService } from '@app/services';
 import { Constants } from '@app/constants';
 
-import { TabsPage } from '@theme/views/tabs/tabs';
+import { TabsPage } from '@theme/views/tabs/page';
 
 @Component({
   selector: 'loader-page',
-  templateUrl: 'loader.html'
+  templateUrl: 'page.html'
 })
 export class LoaderPage {
 
@@ -27,7 +28,10 @@ export class LoaderPage {
     ]).
       then(() => {
         const loadingTime = new Date().getTime() - startTime;
-        if (loadingTime < Constants.LOADER.MIN_LOADING_TIME) {
+        if (
+          ENV.PRODUCTION
+          && loadingTime < Constants.LOADER.MIN_LOADING_TIME
+        ) {
           setTimeout(() => {
             this.navCtrl.setRoot(TabsPage);
           }, Constants.LOADER.MIN_LOADING_TIME - loadingTime);

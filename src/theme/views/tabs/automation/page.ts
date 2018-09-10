@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'home-page',
-  templateUrl: 'home.html'
+  selector: 'automation-page',
+  templateUrl: 'page.html'
 })
-export class HomePage {
+export class AutomationPage {
 
   constructor(
   ) {
