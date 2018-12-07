@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ 'navigation.home' | i18n }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div text-center>
+    <img src="http://placehold.it/100">
+  </div>
+  <h1 text-center>{{room.label}}</h1>
+
+  <div padding>
+    <ion-segment [(ngModel)]="selected" class="reset-this" style="height: 100px !important; overflow: scroll !important; display: flex !important; flex-wrap: nowrap !important; justify-content: unset !important;">
+      <ion-segment-button class="reset-this" [value]="device.id" *ngFor="let device of room.devices" style="width: 30vw !important;">
+        <ionic-card-icon-default
+          [title]="device.name"
+        ></ionic-card-icon-default>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="selected">
+    <ng-container *ngFor="let device of room.devices">
+      <ng-container *ngSwitchCase="device.id">
+        <ionic-device-default
+          [model]='device'
+        ></ionic-device-default>
+      </ng-container>
+    </ng-container>
+  </div>
+</ion-content>
