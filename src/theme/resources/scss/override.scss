@@ -1,0 +1,31 @@
+$card-wp-margin-bottom: 0;
+$card-wp-margin-end: 0;
+$card-wp-margin-left: 0;
+$card-wp-margin-right: 0;
+$card-wp-margin-start: 0;
+$card-wp-margin-top: 0;
+$card-md-margin-bottom: 0;
+$card-md-margin-end: 0;
+$card-md-margin-left: 0;
+$card-md-margin-right: 0;
+$card-md-margin-start: 0;
+$card-md-margin-top: 0;
+$card-ios-margin: 0;
+$card-ios-margin-bottom: 0;
+$card-ios-margin-end: 0;
+$card-ios-margin-start: 0;
+$card-ios-margin-top: 0;
+
+ion-grid.grid {
+  padding: 0;
+}
+
+.col {
+  padding: 8px !important;
+  &:first-child {
+    padding-left: 0 !important;
+  }
+  &:last-child {
+    padding-right: 0 !important;
+  }
+}
