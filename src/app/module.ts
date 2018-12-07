@@ -8,7 +8,7 @@ import { ThemeModule } from '@theme/module';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Network } from '@ionic-native/network';
-import { I18nService, DataService, RequestWrapperService, ApiService } from '@app/services';
+import { I18nService, DataService, RequestWrapperService, ApiService, HomeAutomationRequestService } from '@app/services';
 
 import { AppComponent } from './component';
 
@@ -38,6 +38,7 @@ import { AppComponent } from './component';
     DataService,
     ApiService,
     RequestWrapperService,
+    HomeAutomationRequestService,
   ]
 })
 export class AppModule {}
