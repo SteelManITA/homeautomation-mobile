@@ -1,0 +1,15 @@
+<ion-card no-margin style="width: 100%">
+  <ion-card-content>
+    <ion-row *ngIf="image">
+      <ion-col>
+        <img style="width: 60%; margin: auto" [src]="image">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="align-self: center;">
+        <h3 *ngIf="title" text-center>{{title}}</h3>
+        <p *ngIf="subtitle" text-center>{{subtitle}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

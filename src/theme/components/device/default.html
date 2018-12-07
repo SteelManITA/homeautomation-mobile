@@ -1,0 +1,8 @@
+<ng-container [ngSwitch]="model.type">
+
+  <ionic-air-conditioner
+    *ngSwitchCase="'air-conditioner'"
+    [model]="model"
+  ></ionic-air-conditioner>
+
+</ng-container>
