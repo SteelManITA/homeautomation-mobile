@@ -15,6 +15,19 @@ export class I18nService
   ) {
   }
 
+  private translateDate(date: string): string
+  {
+    return new Date(date).toLocaleDateString('it-IT');
+  }
+
+  private translateText(key: string): string
+  {
+    const text: string = this.DS.get('lang.' + key);
+    return Utils.isDefined(text)
+      ? text
+      : key.replace(/[.-]/g, ' ');
+  }
+
   public init(): Promise<boolean>
   {
     return new Promise(resolve => {
@@ -31,9 +44,19 @@ export class I18nService
     if (Utils.isNotDefined(key)) {
       return '';
     }
-    const text: string = this.DS.get('lang.' + key);
-    return Utils.isDefined(text)
-      ? text
-      : key.replace(/[.-]/g, ' ');
+
+    if (Utils.isDate(key)) {
+      return this.translateDate(key);
+    }
+
+    const datePosition: number = Utils.containsDate(key);
+    if (datePosition === -1) {
+      return this.translateText(key);
+    } else {
+      return this.translateText(key.substr(0, datePosition))
+        + this.translateDate(key.substr(datePosition, 10))
+        + this.translateText(key.substr(datePosition+10, key.length));
+    }
+
   }
 }
