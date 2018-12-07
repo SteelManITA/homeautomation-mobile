@@ -1,13 +1,16 @@
 import { HttpClientModule } from '@angular/common/http';
-import { I18nService, DataService } from '@app/services';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { AppComponent } from './component';
+
+import { ThemeModule } from '@theme/module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ThemeModule } from '@theme/module';
+import { Network } from '@ionic-native/network';
+import { I18nService, DataService, RequestWrapperService, ApiService } from '@app/services';
+
+import { AppComponent } from './component';
 
 @NgModule({
   declarations: [
@@ -30,8 +33,11 @@ import { ThemeModule } from '@theme/module';
       provide: ErrorHandler,
       useClass: IonicErrorHandler
     },
+    Network,
     I18nService,
     DataService,
+    ApiService,
+    RequestWrapperService,
   ]
 })
 export class AppModule {}

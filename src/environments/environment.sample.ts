@@ -9,7 +9,7 @@ import { Environment } from '@app/utils';
 export const ENV: Environment = {
   PRODUCTION: false,
   API: {
-    URL: '127.0.0.1',
+    URL: '127.0.0.1/api/',
     VER: 'v1',
     LOGIN: 'auth/login',
     LOGIN_REFRESH: 'auth/login/refresh',

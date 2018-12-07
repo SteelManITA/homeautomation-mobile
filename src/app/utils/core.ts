@@ -26,4 +26,14 @@ export class Utils
   {
     return value === undefined || value === null;
   }
+
+  static isObject(value: any): boolean
+  {
+    return typeof value === 'object';
+  }
+
+  static isTrueObject(value: any): boolean
+  {
+    return Utils.isDefined(value) && Utils.isObject(value);
+  }
 }
