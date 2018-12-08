@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Device } from '@app/server';
 
 @Component({
@@ -8,8 +8,14 @@ import { Device } from '@app/server';
 export class IonicDeviceDefaultComponent
 {
   @Input() model: Device;
+  @Output() onSent: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
   ) {
+  }
+
+  send(data: any): void
+  {
+    this.onSent.emit(data);
   }
 }

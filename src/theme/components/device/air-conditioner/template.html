@@ -1,1 +1,130 @@
 <h1>{{model.name}}</h1>
+
+<button ion-button (click)="send($event)">Invia</button>
+
+<ion-item>
+  <ion-label>State</ion-label>
+  <ion-toggle [(ngModel)]="state" [checked]="model.state === 'on'" (ionChange)="onStateChanges()"></ion-toggle>
+</ion-item>
+
+<br><br>
+
+<ion-list [(ngModel)]="model.mode" radio-group>
+  <ion-list-header>
+    Mode
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Cool</ion-label>
+    <ion-radio [checked]="model.mode === 'cool'" value="cool"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Heat</ion-label>
+    <ion-radio [checked]="model.mode === 'heat'" value="heat"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Dry</ion-label>
+    <ion-radio [checked]="model.mode === 'dry'" value="dry"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Auto</ion-label>
+    <ion-radio [checked]="model.mode === 'auto'" value="auto"></ion-radio>
+  </ion-item>
+</ion-list>
+
+<br><br>
+
+<ion-list [(ngModel)]="model.fanSpeed" radio-group>
+  <ion-list-header>
+    Fan speed
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Lowest</ion-label>
+    <ion-radio [checked]="model.fanSpeed === 'lowest'" value="lowest"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Low</ion-label>
+    <ion-radio [checked]="model.fanSpeed === 'low'" value="low"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Medium</ion-label>
+    <ion-radio [checked]="model.fanSpeed === 'medium'" value="medium"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>High</ion-label>
+    <ion-radio [checked]="model.fanSpeed === 'high'" value="high"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Highest</ion-label>
+    <ion-radio [checked]="model.fanSpeed === 'highest'" value="highest"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Auto</ion-label>
+    <ion-radio [checked]="model.fanSpeed === 'auto'" value="auto"></ion-radio>
+  </ion-item>
+</ion-list>
+
+<br><br>
+
+<ion-list [(ngModel)]="model.swing" radio-group>
+  <ion-list-header>
+    Swing
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Lowest</ion-label>
+    <ion-radio [checked]="model.swing === 'lowest'" value="lowest"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Low</ion-label>
+    <ion-radio [checked]="model.swing === 'low'" value="low"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Medium</ion-label>
+    <ion-radio [checked]="model.swing === 'medium'" value="medium"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>High</ion-label>
+    <ion-radio [checked]="model.swing === 'high'" value="high"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Highest</ion-label>
+    <ion-radio [checked]="model.swing === 'highest'" value="highest"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Auto</ion-label>
+    <ion-radio [checked]="model.swing === 'auto'" value="auto"></ion-radio>
+  </ion-item>
+</ion-list>
+
+<ion-row>
+  <ion-col align-self-center col-5 class="label">
+    <label>Temperature</label>
+  </ion-col>
+  <ion-col align-self-center col-7 text-right>
+    <button (click)="dec($event)" [disabled]="model.temperature === 18">-</button>
+    <span class="value">{{ model.temperature }}</span>
+    <button (click)="inc($event)" [disabled]="model.temperature === 30">+</button>
+  </ion-col>
+</ion-row>
+
+<button ion-button (click)="send($event)">Invia</button>
+
+<!-- <ion-item>
+  <ion-range [(ngModel)]="brightness">
+    <ion-icon range-left small name="sunny"></ion-icon>
+    <ion-icon range-right name="sunny"></ion-icon>
+  </ion-range>
+</ion-item> -->
+

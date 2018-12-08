@@ -3,6 +3,7 @@
   <ionic-air-conditioner
     *ngSwitchCase="'air-conditioner'"
     [model]="model"
+    (onSent)="send($event)"
   ></ionic-air-conditioner>
 
 </ng-container>

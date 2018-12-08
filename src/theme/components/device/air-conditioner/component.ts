@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { AirConditionerDevice } from '@app/server';
 
 @Component({
@@ -6,10 +6,41 @@ import { AirConditionerDevice } from '@app/server';
   templateUrl: './template.html'
 })
 export class IonicAirConditionerComponent
+  implements OnInit
 {
   @Input() model: AirConditionerDevice;
+  @Output() onSent: EventEmitter<any> = new EventEmitter<any>();
+  state: boolean = false;
 
   constructor(
   ) {
+  }
+
+  ngOnInit() {
+    this.state = (this.model.state === 'on') ? true : false;
+  }
+
+  inc(event: Event): void
+  {
+    if (this.model.temperature < 30) {
+      ++this.model.temperature;
+    }
+  }
+
+  dec(event: Event): void
+  {
+    if (this.model.temperature > 16) {
+      --this.model.temperature;
+    }
+  }
+
+  send(): void
+  {
+    this.onSent.emit(this.model);
+  }
+
+  onStateChanges(): void
+  {
+    this.model.state = (this.state) ? 'on' : 'off';
   }
 }

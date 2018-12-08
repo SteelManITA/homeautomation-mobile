@@ -27,6 +27,7 @@
       <ng-container *ngSwitchCase="device.id">
         <ionic-device-default
           [model]='device'
+          (onSent)='send($event)'
         ></ionic-device-default>
       </ng-container>
     </ng-container>
