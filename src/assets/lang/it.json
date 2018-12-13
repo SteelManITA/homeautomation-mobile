@@ -3,5 +3,14 @@
     "home": "Home",
     "automation": "Automazione",
     "settings": "Impostazioni"
+  },
+  "room": {
+    "bedroom": "Stanza da letto",
+    "living-room": "Soggiorno"
+  },
+  "home": {
+    "all-devices": "Tutti i dispositivi",
+    "device": "dispositivo",
+    "devices": "dispositivi"
   }
 }

@@ -7,20 +7,20 @@
 </ion-header>
 
 <ion-content padding>
-  <div text-center>
-    <img src="http://placehold.it/100">
+  <div text-center col-4 offset-4>
+    <img style="width: 100%; height: auto" src="{{ room.name | image | async }}">
   </div>
-  <h1 text-center>{{room.label}}</h1>
+  <h1 text-center>{{ 'room.' + room.name | i18n }}</h1>
 
-  <div padding>
-    <ion-segment [(ngModel)]="selected" class="reset-this" style="height: 100px !important; overflow: scroll !important; display: flex !important; flex-wrap: nowrap !important; justify-content: unset !important;">
-      <ion-segment-button class="reset-this" [value]="device.id" *ngFor="let device of room.devices" style="width: 30vw !important;">
-        <ionic-card-icon-default
-          [title]="device.name"
-        ></ionic-card-icon-default>
-      </ion-segment-button>
-    </ion-segment>
-  </div>
+  <ion-segment [(ngModel)]="selected" class="reset-this" style="overflow: scroll !important; display: flex !important; flex-wrap: nowrap !important; justify-content: unset !important;">
+    <ion-segment-button class="reset-this" [value]="device.id" *ngFor="let device of room.devices" style="width: 30vw !important; margin-right: 10px !important;">
+      <ionic-card-icon-default
+        classes="background-primary"
+        image="assets/img/placeholder-150.png"
+        [title]="device.name"
+      ></ionic-card-icon-default>
+    </ion-segment-button>
+  </ion-segment>
 
   <div [ngSwitch]="selected">
     <ng-container *ngFor="let device of room.devices">

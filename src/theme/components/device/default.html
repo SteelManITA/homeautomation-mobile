@@ -6,4 +6,10 @@
     (onSent)="send($event)"
   ></ionic-air-conditioner>
 
+  <ionic-light
+    *ngSwitchCase="'light'"
+    [model]="model"
+    (onSent)="send($event)"
+  ></ionic-light>
+
 </ng-container>

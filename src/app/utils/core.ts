@@ -48,4 +48,14 @@ export class Utils
   {
     return Utils.isDefined(value) && Utils.isObject(value);
   }
+
+  static imageExists(url: string): Promise<boolean>
+  {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+  }
 }

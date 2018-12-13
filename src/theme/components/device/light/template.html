@@ -1,0 +1,8 @@
+<h1>{{ model.name }}</h1>
+
+<button ion-button (click)="send($event)">Invia</button>
+
+<ion-item>
+  <ion-label>State</ion-label>
+  <ion-toggle [(ngModel)]="state" [checked]="model.state === 'on'" (ionChange)="onStateChanges()"></ion-toggle>
+</ion-item>

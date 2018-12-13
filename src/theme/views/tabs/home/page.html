@@ -10,19 +10,13 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-card>
-          <ion-card-content>
-            <ion-row>
-              <ion-col>
-                <img style="width: 60%; margin: auto" [src]="'http://placehold.it/100'">
-              </ion-col>
-              <ion-col style="align-self: center;">
-                <h3>tutti i dispositivi</h3>
-                <p>{{devicesCount}} dispositivi</p>
-              </ion-col>
-            </ion-row>
-          </ion-card-content>
-        </ion-card>
+        <ionic-card-icon-default
+          classes="background-primary"
+          image="assets/img/home.png"
+          title="{{ 'home.all-devices' | i18n }}"
+          subtitle="{{ devicesCount }} {{ (devicesCount === 1 ? 'home.device' : 'home.devices') | i18n }}"
+          imagePosition="left"
+        ></ionic-card-icon-default>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -32,9 +26,9 @@
           (click)="gotoRoom($event, room)"
         >
           <ionic-card-icon-default
-            [image]="getRoomImage(room.name)"
-            [title]="room.label"
-            [subtitle]="room.devices.length + ' dispositivi'"
+            image="{{ room.name | image | async }}"
+            title="{{ 'room.' + room.name | i18n }}"
+            subtitle="{{ room.devices.length }} {{ (room.devices.length === 1 ? 'home.device' : 'home.devices') | i18n }}"
           ></ionic-card-icon-default>
         </a>
       </ion-col>

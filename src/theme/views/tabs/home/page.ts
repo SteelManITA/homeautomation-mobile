@@ -30,11 +30,6 @@ export class HomePage {
       });
   }
 
-  public getRoomImage(type: string): string
-  {
-    return 'http://placehold.it/100';
-  }
-
   public gotoRoom(event: Event, room: Room): void
   {
     this.navCtrl.push(RoomPage, {

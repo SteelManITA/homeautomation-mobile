@@ -1,35 +1,66 @@
-$card-wp-margin-bottom: 0;
-$card-wp-margin-end: 0;
-$card-wp-margin-left: 0;
-$card-wp-margin-right: 0;
-$card-wp-margin-start: 0;
-$card-wp-margin-top: 0;
-$card-md-margin-bottom: 0;
-$card-md-margin-end: 0;
-$card-md-margin-left: 0;
-$card-md-margin-right: 0;
-$card-md-margin-start: 0;
-$card-md-margin-top: 0;
-$card-ios-margin: 0;
-$card-ios-margin-bottom: 0;
-$card-ios-margin-end: 0;
-$card-ios-margin-start: 0;
-$card-ios-margin-top: 0;
+$colors: (
+  primary:    (base: #543996, contrast: #ffffff),
+  secondary:  (base: #88439e, contrast: #ffffff),
+  danger:     #d91e18,
+  light:      (base: #f4f4f4, contrast: #000000),
+  dark:       (base: #222222, contrast: #ffffff),
+  alert:      #F39C12,
+);
 
-$item-wp-padding-left: 0;
-$item-md-padding-left: 0;
-$item-ios-padding-left: 0;
+$card-box-shadow-color: rgba(0,0,0,.1);
+$card-box-shadow: 0px 0px 20px 0px $card-box-shadow-color;
+$card-background-color: transparent;
+$card-margin-bottom: 0;
+$card-margin-end: 0;
+$card-margin-left: 0;
+$card-margin-right: 0;
+$card-margin-start: 0;
+$card-margin-top: 0;
+$item-padding-left: 0;
+
+/* TODO: trovare un modo per effettuare queste assegnazioni in automatico */
+
+$card-wp-box-shadow-color: $card-box-shadow-color;
+$card-wp-box-shadow: $card-box-shadow;
+$card-wp-background-color: $card-background-color;
+$card-wp-margin-bottom: $card-margin-bottom;
+$card-wp-margin-end: $card-margin-end;
+$card-wp-margin-left: $card-margin-left;
+$card-wp-margin-right: $card-margin-right;
+$card-wp-margin-start: $card-margin-start;
+$card-wp-margin-top: $card-margin-top;
+$item-wp-padding-left: $item-padding-left;
+
+$card-md-box-shadow-color: $card-box-shadow-color;
+$card-md-box-shadow: $card-box-shadow;
+$card-md-background-color: $card-background-color;
+$card-md-margin-bottom: $card-margin-bottom;
+$card-md-margin-end: $card-margin-end;
+$card-md-margin-left: $card-margin-left;
+$card-md-margin-right: $card-margin-right;
+$card-md-margin-start: $card-margin-start;
+$card-md-margin-top: $card-margin-top;
+$item-md-padding-left: $item-padding-left;
+
+$card-ios-box-shadow-color: $card-box-shadow-color;
+$card-ios-box-shadow: $card-box-shadow;
+$card-ios-background-color: $card-background-color;
+$card-ios-margin-bottom: $card-margin-bottom;
+$card-ios-margin-end: $card-margin-end;
+$card-ios-margin-left: $card-margin-left;
+$card-ios-margin-right: $card-margin-right;
+$card-ios-margin-start: $card-margin-start;
+$card-ios-margin-top: $card-margin-top;
+$item-ios-padding-left: $item-padding-left;
+
 
 ion-grid.grid {
   padding: 0;
-}
-
-.col {
-  padding: 8px !important;
-  &:first-child {
-    padding-left: 0 !important;
-  }
-  &:last-child {
-    padding-right: 0 !important;
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+    .col {
+      padding: 8px !important;
+    }
   }
 }

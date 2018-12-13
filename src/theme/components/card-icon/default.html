@@ -1,14 +1,17 @@
-<ion-card no-margin style="width: 100%">
+<ion-card no-margin [class]="classes" [ngClass]="{'image-left': image && imagePosition === 'left'}">
   <ion-card-content>
-    <ion-row *ngIf="image">
+    <ion-row *ngIf="image && imagePosition === 'top'">
       <ion-col>
-        <img style="width: 60%; margin: auto" [src]="image">
+        <img [src]="image">
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col style="align-self: center;">
-        <h3 *ngIf="title" text-center>{{title}}</h3>
-        <p *ngIf="subtitle" text-center>{{subtitle}}</p>
+      <ion-col *ngIf="image && imagePosition === 'left'">
+        <img [src]="image">
+      </ion-col>
+      <ion-col>
+        <h3 *ngIf="title" text-center>{{ title }}</h3>
+        <p *ngIf="subtitle" text-center>{{ subtitle }}</p>
       </ion-col>
     </ion-row>
   </ion-card-content>
