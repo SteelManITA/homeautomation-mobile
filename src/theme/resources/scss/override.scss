@@ -7,6 +7,16 @@ $colors: (
   alert:      #F39C12,
 );
 
+$font-family-base: "Helvetica Neue", sans-serif;
+
+$toolbar-height: 10rem;
+$toolbar-title-font-size: 3rem;
+$toolbar-button-font-size: 2rem;
+
+$tabs-background: #fff;
+$tabs-tab-color-active: color($colors, primary, base);
+$tabs-tab-color-inactive: #a1a1a1;
+
 $card-box-shadow-color: rgba(0,0,0,.1);
 $card-box-shadow: 0px 0px 20px 0px $card-box-shadow-color;
 $card-background-color: transparent;
@@ -16,10 +26,17 @@ $card-margin-left: 0;
 $card-margin-right: 0;
 $card-margin-start: 0;
 $card-margin-top: 0;
+$card-border-radius: 5px;
 $item-padding-left: 0;
 
 /* TODO: trovare un modo per effettuare queste assegnazioni in automatico */
 
+$font-family-wp-base: $font-family-base;
+$toolbar-wp-height: $toolbar-height;
+$toolbar-wp-title-font-size: $toolbar-title-font-size;
+$toolbar-wp-button-font-size: $toolbar-button-font-size;
+$tabs-wp-tab-color-active: $tabs-tab-color-active;
+$tabs-wp-tab-color-inactive: $tabs-tab-color-inactive;
 $card-wp-box-shadow-color: $card-box-shadow-color;
 $card-wp-box-shadow: $card-box-shadow;
 $card-wp-background-color: $card-background-color;
@@ -29,8 +46,15 @@ $card-wp-margin-left: $card-margin-left;
 $card-wp-margin-right: $card-margin-right;
 $card-wp-margin-start: $card-margin-start;
 $card-wp-margin-top: $card-margin-top;
+$card-wp-border-radius: $card-border-radius;
 $item-wp-padding-left: $item-padding-left;
 
+$font-family-md-base: $font-family-base;
+$toolbar-md-height: $toolbar-height;
+$toolbar-md-title-font-size: $toolbar-title-font-size;
+$toolbar-md-button-font-size: $toolbar-button-font-size;
+$tabs-md-tab-color-active: $tabs-tab-color-active;
+$tabs-md-tab-color-inactive: $tabs-tab-color-inactive;
 $card-md-box-shadow-color: $card-box-shadow-color;
 $card-md-box-shadow: $card-box-shadow;
 $card-md-background-color: $card-background-color;
@@ -40,8 +64,15 @@ $card-md-margin-left: $card-margin-left;
 $card-md-margin-right: $card-margin-right;
 $card-md-margin-start: $card-margin-start;
 $card-md-margin-top: $card-margin-top;
+$card-md-border-radius: $card-border-radius;
 $item-md-padding-left: $item-padding-left;
 
+$font-family-ios-base: $font-family-base;
+$toolbar-ios-height: $toolbar-height;
+$toolbar-ios-title-font-size: $toolbar-title-font-size;
+$toolbar-ios-button-font-size: $toolbar-button-font-size;
+$tabs-ios-tab-color-active: $tabs-tab-color-active;
+$tabs-ios-tab-color-inactive: $tabs-tab-color-inactive;
 $card-ios-box-shadow-color: $card-box-shadow-color;
 $card-ios-box-shadow: $card-box-shadow;
 $card-ios-background-color: $card-background-color;
@@ -51,8 +82,44 @@ $card-ios-margin-left: $card-margin-left;
 $card-ios-margin-right: $card-margin-right;
 $card-ios-margin-start: $card-margin-start;
 $card-ios-margin-top: $card-margin-top;
+$card-ios-border-radius: $card-border-radius;
 $item-ios-padding-left: $item-padding-left;
 
+ion-header {
+  & + ion-content {
+    .fixed-content,
+    .scroll-content {
+      top: -2rem;
+    }
+  }
+  &::after {
+    display: none !important;
+  }
+  ion-navbar {
+    .toolbar-background {
+      background-color: #fff !important
+    }
+    ion-icon {
+      color: #a1a1a1;
+    }
+  }
+}
+
+ion-tabs {
+  &[tabsLayout=title-hide] {
+    .tab-button[aria-selected=true] {
+      .tab-button-text {
+        display: block !important;
+      }
+    }
+  }
+  .tabbar {
+    &::before {
+      display: none;
+    }
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+  }
+}
 
 ion-grid.grid {
   padding: 0;
