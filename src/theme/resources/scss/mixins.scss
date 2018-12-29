@@ -151,3 +151,11 @@
   all: initial !important;
   all: unset !important;
 }
+
+@mixin background-primary {
+  background-image: linear-gradient(
+    to right,
+    color($colors, secondary, base),
+    color($colors, primary, base)
+  ) !important;
+}
