@@ -86,10 +86,10 @@ $card-ios-border-radius: $card-border-radius;
 $item-ios-padding-left: $item-padding-left;
 
 ion-header {
-  & + ion-content {
+  & + ion-content[padding] {
     .fixed-content,
     .scroll-content {
-      top: -2rem;
+      top: -$content-padding;
     }
   }
   &::after {
