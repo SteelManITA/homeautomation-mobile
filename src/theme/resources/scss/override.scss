@@ -131,3 +131,126 @@ ion-grid.grid {
     }
   }
 }
+
+ion-item {
+  .item-inner {
+    border-bottom: none !important;
+  }
+}
+
+// TODO: fare override delle variabili dove possibile
+ion-segment {
+  ion-segment-button {
+    ionic-card-icon-default {
+      ion-card {
+        ion-card-content {
+          padding: 0 !important;
+          .title {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+// TODO: fare override delle variabili dove possibile
+ion-list[radio-group] {
+  margin: 24px 0 !important;
+  display: flex !important;
+  align-items: baseline !important;
+  // border-top: 1px solid #dedede !important;
+  padding: 5px 0 !important;
+  ion-list-header {
+    width: 25vw;
+    margin-bottom: 0 !important;
+    border-top: none !important;
+    ion-label {
+      color: #222;
+      margin: 0 !important;
+      font-weight: bold;
+    }
+  }
+
+  div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    // overflow: scroll;
+    // flex-wrap: nowrap;
+
+    ion-item {
+      // flex: 0 0 auto;
+      text-align: center !important;
+      width: auto !important;
+      .item-inner {
+        padding-right: 0 !important;
+        border-bottom: none !important;
+        ion-label {
+          @include reset();
+          color: #ccc !important;
+          margin: 0 !important;
+          transition: ease all .2s !important;
+          margin: auto !important;
+          padding: 5px 15px !important;
+        }
+      }
+      &.item-radio-checked {
+        ion-label {
+          @include reset();
+          @include background-primary();
+          margin: auto !important;
+          padding: 5px 15px !important;
+          border-radius: 25px !important;
+          color: color($colors, primary, contrast) !important;
+        }
+      }
+    }
+    ion-radio {
+      margin: 0 !important;
+      .radio-icon {
+        display: none;
+      }
+      .button-effect {
+        display: none;
+      }
+    }
+  }
+}
+
+// TODO: fare override delle variabili dove possibile
+ion-toggle {
+  @include reset();
+  width: 70px !important;
+  padding: 10px 0px !important;
+  .toggle-icon {
+    padding: 5px 20px !important;
+    display: block !important;
+    border-radius: 25px !important;
+  }
+  &.toggle-checked {
+    @include reset();
+    width: 70px !important;
+    .toggle-icon {
+      @include background-primary();
+      &::after {
+        content: 'ON';
+        display: block;
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+  .toggle-icon {
+    height: auto;
+    &::after {
+      content: 'OFF';
+      display: block;
+      text-align: center;
+      color: black;
+    }
+    .toggle-inner {
+      display: none;
+    }
+  }
+}

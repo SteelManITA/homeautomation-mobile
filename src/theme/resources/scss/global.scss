@@ -20,15 +20,12 @@ a {
   }
 }
 
-// TODO: spostare nel file corretto
-ion-segment {
-  ion-segment-button {
-    ionic-card-icon-default {
-      ion-card {
-        ion-card-content {
-          padding: 0 !important;
-        }
-      }
-    }
+/*numeric-buttons*/
+.numeric-buttons {
+  text-align: center;
+  font-size: 8rem;
+  button {
+    background-color: unset;
+    font-size: 8rem;
   }
 }
