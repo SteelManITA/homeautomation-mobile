@@ -96,8 +96,13 @@ ion-header {
     display: none !important;
   }
   ion-navbar {
+    .title {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
     .toolbar-background {
-      background-color: #fff !important
+      background-color: #fff !important;
+      border-bottom: none !important;
     }
     ion-icon {
       color: #a1a1a1;
