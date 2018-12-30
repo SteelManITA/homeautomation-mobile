@@ -1,0 +1,41 @@
+{
+  "navigation": {
+    "home": "Home",
+    "automation": "Automation",
+    "settings": "Settings"
+  },
+  "room": {
+    "bedroom": "Bedroom",
+    "living-room": "Living room"
+  },
+  "home": {
+    "all-devices": "All devices",
+    "device": "device",
+    "devices": "devices"
+  },
+  "device": {
+    "default": {
+      "send": "Send",
+      "state": "State"
+    },
+    "air_conditioner": {
+      "auto": "Auto",
+      "cool": "Cool",
+      "dry": "Dry",
+      "fan_speed": "Fan speed",
+      "heat": "Heat",
+      "high": "Hight",
+      "highest": "Highest",
+      "low": "Low",
+      "lowest": "Lowest",
+      "medium": "Medium",
+      "mode": "Mode",
+      "send": "device.default.send | i18n",
+      "swing": "Swing"
+    },
+    "light": {
+      "send": "device.default.send | i18n",
+      "state": "device.default.state | i18n"
+    }
+  }
+}

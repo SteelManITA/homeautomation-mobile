@@ -11,7 +11,7 @@ export class I18nService
 
   constructor(
     protected DS: DataService,
-    private http: HttpClient
+    private http: HttpClient,
   ) {
   }
 
@@ -28,13 +28,24 @@ export class I18nService
       : key.replace(/[.-]/g, ' ');
   }
 
-  public init(): Promise<boolean>
+  public init(lang: string): Promise<boolean>
   {
     return new Promise(resolve => {
-      this.http.get("assets/lang/it.json").
-        subscribe((response: {[key: string]: any}) => {
+      this.http.get('assets/lang/' + lang + '.json').
+        toPromise().
+        then((response: {[key: string]: any}) => {
           this.DS.set('lang', response);
+          // this.storage.set('currentLang', lang);
           resolve(true);
+        }).
+        catch((e: Error) => {
+          console.log(e);
+          this.http.get('assets/lang/it.json').
+            subscribe((response: {[key: string]: any}) => {
+              this.DS.set('lang', response);
+              // this.storage.set('currentLang', 'it');
+              resolve(true);
+            });
         });
     });
   }

@@ -23,8 +23,10 @@ export class LoaderPage {
   {
     const startTime = new Date().getTime();
 
+    let lang = 'it';
+
     Promise.all([
-      this.i18n.init(),
+      this.i18n.init(lang),
     ]).
       then(() => {
         const loadingTime = new Date().getTime() - startTime;
