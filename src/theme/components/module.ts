@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 
+import { SharedModule } from '@app/shared.module';
+
 import { IonicCardIconDefaultModule } from './card-icon/module';
 import { IonicDeviceDefaultModule } from './device/module';
 
@@ -12,6 +14,7 @@ const COMPONENTS: any[] = [
 @NgModule({
   imports: [
     IonicModule,
+    SharedModule,
     ...COMPONENTS,
   ],
   exports: [
