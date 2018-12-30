@@ -19,27 +19,27 @@
 
 <ion-list [(ngModel)]="model.mode" radio-group>
   <ion-list-header>
-    mode
+    {{ 'device.air_conditioner.mode' | i18n }}
   </ion-list-header>
 
   <div>
     <ion-item>
-      <ion-label>cool</ion-label>
+      <ion-label>{{ 'device.air_conditioner.cool' | i18n }}</ion-label>
       <ion-radio [checked]="model.mode === 'cool'" value="cool"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>heat</ion-label>
+      <ion-label>{{ 'device.air_conditioner.heat' | i18n }}</ion-label>
       <ion-radio [checked]="model.mode === 'heat'" value="heat"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>dry</ion-label>
+      <ion-label>{{ 'device.air_conditioner.dry' | i18n }}</ion-label>
       <ion-radio [checked]="model.mode === 'dry'" value="dry"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>auto</ion-label>
+      <ion-label>{{ 'device.air_conditioner.auto' | i18n }}</ion-label>
       <ion-radio [checked]="model.mode === 'auto'" value="auto"></ion-radio>
     </ion-item>
   </div>
@@ -47,37 +47,37 @@
 
 <ion-list [(ngModel)]="model.fanSpeed" radio-group>
   <ion-list-header>
-    fan_speed
+    {{ 'device.air_conditioner.fan_speed' | i18n }}
   </ion-list-header>
 
   <div>
     <ion-item>
-      <ion-label>lowest</ion-label>
+      <ion-label>{{ 'device.air_conditioner.lowest' | i18n }}</ion-label>
       <ion-radio [checked]="model.fanSpeed === 'lowest'" value="lowest"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>low</ion-label>
+      <ion-label>{{ 'device.air_conditioner.low' | i18n }}</ion-label>
       <ion-radio [checked]="model.fanSpeed === 'low'" value="low"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>medium</ion-label>
+      <ion-label>{{ 'device.air_conditioner.medium' | i18n }}</ion-label>
       <ion-radio [checked]="model.fanSpeed === 'medium'" value="medium"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>high</ion-label>
+      <ion-label>{{ 'device.air_conditioner.high' | i18n }}</ion-label>
       <ion-radio [checked]="model.fanSpeed === 'high'" value="high"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>highest</ion-label>
+      <ion-label>{{ 'device.air_conditioner.highest' | i18n }}</ion-label>
       <ion-radio [checked]="model.fanSpeed === 'highest'" value="highest"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>auto</ion-label>
+      <ion-label>{{ 'device.air_conditioner.auto' | i18n }}</ion-label>
       <ion-radio [checked]="model.fanSpeed === 'auto'" value="auto"></ion-radio>
     </ion-item>
   </div>
@@ -85,43 +85,43 @@
 
 <ion-list [(ngModel)]="model.swing" radio-group>
   <ion-list-header>
-    swing
+    {{ 'device.air_conditioner.swing' | i18n }}
   </ion-list-header>
 
   <div>
     <ion-item>
-      <ion-label>lowest</ion-label>
+      <ion-label>{{ 'device.air_conditioner.lowest' | i18n }}</ion-label>
       <ion-radio [checked]="model.swing === 'lowest'" value="lowest"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>low</ion-label>
+      <ion-label>{{ 'device.air_conditioner.low' | i18n }}</ion-label>
       <ion-radio [checked]="model.swing === 'low'" value="low"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>medium</ion-label>
+      <ion-label>{{ 'device.air_conditioner.medium' | i18n }}</ion-label>
       <ion-radio [checked]="model.swing === 'medium'" value="medium"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>high</ion-label>
+      <ion-label>{{ 'device.air_conditioner.high' | i18n }}</ion-label>
       <ion-radio [checked]="model.swing === 'high'" value="high"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>highest</ion-label>
+      <ion-label>{{ 'device.air_conditioner.highest' | i18n }}</ion-label>
       <ion-radio [checked]="model.swing === 'highest'" value="highest"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>auto</ion-label>
+      <ion-label>{{ 'device.air_conditioner.auto' | i18n }}</ion-label>
       <ion-radio [checked]="model.swing === 'auto'" value="auto"></ion-radio>
     </ion-item>
   </div>
 </ion-list>
 
-<button ion-button (click)="send($event)">send</button>
+<button ion-button (click)="send($event)">{{ 'device.air_conditioner.send' | i18n }}</button>
 
 <!-- <ion-item>
   <ion-range [(ngModel)]="brightness">

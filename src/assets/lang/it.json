@@ -12,5 +12,30 @@
     "all-devices": "Tutti i dispositivi",
     "device": "dispositivo",
     "devices": "dispositivi"
+  },
+  "device": {
+    "default": {
+      "send": "Invia",
+      "state": "Stato"
+    },
+    "air_conditioner": {
+      "auto": "Auto",
+      "cool": "Freddo",
+      "dry": "Dry",
+      "fan_speed": "Velocità delle ventole",
+      "heat": "Caldo",
+      "high": "Alto",
+      "highest": "Altissimo",
+      "low": "Basso",
+      "lowest": "Bassissimo",
+      "medium": "Medio",
+      "mode": "Modalità",
+      "send": "device.default.send | i18n",
+      "swing": "Altezza alette"
+    },
+    "light": {
+      "send": "device.default.send | i18n",
+      "state": "device.default.state | i18n"
+    }
   }
 }
