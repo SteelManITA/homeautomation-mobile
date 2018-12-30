@@ -9,7 +9,6 @@ export class IonicAirConditionerComponent
   implements OnInit
 {
   @Input() model: AirConditionerDevice;
-  @Output() onSent: EventEmitter<any> = new EventEmitter<any>();
   state: boolean = false;
 
   constructor(
@@ -32,11 +31,6 @@ export class IonicAirConditionerComponent
     if (this.model.temperature > 16) {
       --this.model.temperature;
     }
-  }
-
-  send(): void
-  {
-    this.onSent.emit(this.model);
   }
 
   onStateChanges(): void

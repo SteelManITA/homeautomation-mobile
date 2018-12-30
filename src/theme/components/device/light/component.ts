@@ -9,7 +9,6 @@ export class IonicLightComponent
   implements OnInit
 {
   @Input() model: LightDevice;
-  @Output() onSent: EventEmitter<any> = new EventEmitter<any>();
   state: boolean = false;
 
   constructor(
@@ -18,11 +17,6 @@ export class IonicLightComponent
 
   ngOnInit() {
     this.state = (this.model.state === 'on') ? true : false;
-  }
-
-  send(): void
-  {
-    this.onSent.emit(this.model);
   }
 
   onStateChanges(): void

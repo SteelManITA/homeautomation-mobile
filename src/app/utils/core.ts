@@ -62,4 +62,14 @@ export class Utils
   static normalize(min: number, max: number, value: number) {
     return (value-min) / (max-min);
   }
+
+  static diffMilliseconds(dateEnd: Date, dateBegin: Date): number
+  {
+    return (dateEnd.valueOf() - dateBegin.valueOf());
+  }
+
+  static equalObjects(obj1: Object, obj2: Object): boolean
+  {
+    return JSON.stringify(obj1) === JSON.stringify(obj2)
+  }
 }
