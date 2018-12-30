@@ -150,8 +150,9 @@ ion-segment {
       ion-card {
         height: 100%;
         ion-card-content {
-          padding: 0 !important;
+          padding: 8px 0 !important;
           .title {
+            margin-bottom: 0;
             font-weight: normal;
           }
         }
