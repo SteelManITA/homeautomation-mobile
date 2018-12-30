@@ -3,11 +3,15 @@ import { Component } from '@angular/core';
 import { Room } from '@app/server';
 import { NavParams } from 'ionic-angular';
 
+import { AbstractPage } from '@theme/views/AbstractPage';
+
 @Component({
   selector: 'room-page',
   templateUrl: 'page.html'
 })
-export class RoomPage {
+export class RoomPage
+  extends AbstractPage
+{
   room: Room;
   tab: string;
 
@@ -15,6 +19,7 @@ export class RoomPage {
     private params: NavParams,
     private request: HomeAutomationRequestService,
   ) {
+    super();
     this.room = this.params.data.room;
   }
 

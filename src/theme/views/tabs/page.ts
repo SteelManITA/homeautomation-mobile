@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 import { I18nService } from '@app/services';
 
+import { AbstractPage } from '@theme/views/AbstractPage';
 import { HomePage } from '@theme/views/tabs/home/page';
 import { AutomationPage } from '@theme/views/tabs/automation/page';
 import { SettingsPage } from '@theme/views/tabs/settings/page';
@@ -18,12 +19,15 @@ export interface BottomNavigationDestination
   selector: 'tabs-page',
   templateUrl: 'page.html'
 })
-export class TabsPage {
+export class TabsPage
+  extends AbstractPage
+{
   public destinations: BottomNavigationDestination[];
 
   constructor(
     protected i18n: I18nService
   ) {
+    super();
     this.destinations = Array(3);
     this.destinations[0] = {
       root: HomePage,

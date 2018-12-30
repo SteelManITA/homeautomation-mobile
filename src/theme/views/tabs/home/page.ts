@@ -4,12 +4,15 @@ import { HomeAutomationRequestService } from '@app/services/homeautomationreques
 import { Room } from '@app/server';
 import { NavController } from 'ionic-angular';
 
+import { AbstractPage } from '@theme/views/AbstractPage';
+
 @Component({
   selector: 'home-page',
   templateUrl: 'page.html'
 })
-export class HomePage {
-
+export class HomePage
+  extends AbstractPage
+{
   rooms: Room[] = [];
   devicesCount: number = 0;
 
@@ -17,6 +20,7 @@ export class HomePage {
     private request: HomeAutomationRequestService,
     private navCtrl: NavController,
   ) {
+    super();
     this.request.getRooms().
       then((rooms) => {
         console.log('riuscito', rooms);

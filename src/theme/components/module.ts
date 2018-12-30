@@ -5,10 +5,12 @@ import { SharedModule } from '@app/shared.module';
 
 import { IonicCardIconDefaultModule } from './card-icon/module';
 import { IonicDeviceDefaultModule } from './device/module';
+import { IonicHeaderDefaultModule } from './header/module';
 
 const COMPONENTS: any[] = [
   IonicCardIconDefaultModule,
   IonicDeviceDefaultModule,
+  IonicHeaderDefaultModule,
 ]
 
 @NgModule({

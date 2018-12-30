@@ -58,4 +58,8 @@ export class Utils
       img.src = url;
     });
   }
+
+  static normalize(min: number, max: number, value: number) {
+    return (value-min) / (max-min);
+  }
 }
