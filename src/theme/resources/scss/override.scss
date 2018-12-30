@@ -143,6 +143,7 @@ ion-segment {
   ion-segment-button {
     ionic-card-icon-default {
       ion-card {
+        height: 100%;
         ion-card-content {
           padding: 0 !important;
           .title {
