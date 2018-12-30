@@ -1,6 +1,4 @@
-<h1>{{ model.name }}</h1>
-
-<ion-item>
-  <ion-label>{{ 'device.light.state' | i18n }}</ion-label>
+<ion-item style="margin-top: 16px">
+  <ion-label><h1 style="margin: 0;">{{ model.name }}</h1></ion-label>
   <ion-toggle [(ngModel)]="state" [checked]="model.state === 'on'" (ionChange)="onStateChanges()"></ion-toggle>
 </ion-item>

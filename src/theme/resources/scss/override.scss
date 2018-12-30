@@ -163,10 +163,13 @@ ion-list[radio-group] {
   // border-top: 1px solid #dedede !important;
   padding: 5px 0 !important;
   ion-list-header {
+    align-self: center;
+    border-bottom: none;
     width: 25vw;
     margin-bottom: 0 !important;
     border-top: none !important;
     ion-label {
+      white-space: normal;
       color: #222;
       margin: 0 !important;
       font-weight: bold;
@@ -222,7 +225,7 @@ ion-list[radio-group] {
 // TODO: fare override delle variabili dove possibile
 ion-toggle {
   @include reset();
-  width: 70px !important;
+  width: 8rem !important;
   padding: 10px 0px !important;
   .toggle-icon {
     padding: 5px 20px !important;
@@ -231,11 +234,12 @@ ion-toggle {
   }
   &.toggle-checked {
     @include reset();
-    width: 70px !important;
+    width: 8rem !important;
     .toggle-icon {
       @include background-primary();
       &::after {
         content: 'ON';
+        position: relative;
         display: block;
         text-align: center;
         color: white;
@@ -246,6 +250,7 @@ ion-toggle {
     height: auto;
     &::after {
       content: 'OFF';
+      position: relative;
       display: block;
       text-align: center;
       color: black;
