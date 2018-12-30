@@ -20,7 +20,7 @@ export class ImagePipe
         if (result) {
           return path;
         } else {
-          return 'assets/img/placeholder-150.png';
+          return 'assets/img/placeholder.png';
         }
       });
   }

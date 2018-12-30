@@ -16,7 +16,7 @@
     <ion-segment-button class="reset-this" [value]="device.id" *ngFor="let device of room.devices" style="width: 30vw !important; margin-right: 10px !important;">
       <ionic-card-icon-default
         classes="background-primary"
-        image="assets/img/placeholder-150.png"
+        image="{{ device.type | image | async }}"
         [title]="device.name"
       ></ionic-card-icon-default>
     </ion-segment-button>
