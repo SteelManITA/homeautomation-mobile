@@ -25,7 +25,42 @@ a {
   text-align: center;
   font-size: 8rem;
   button {
-    background-color: unset;
-    font-size: 8rem;
+    background: none;
+  }
+}
+
+div {
+  &.plus,
+  &.minus {
+    background-color: #eeeeee;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+
+      margin: 0 auto;
+      position: absolute;
+      background-color: #9a9a9a;
+    }
+
+    &::before {
+      width: 60%;
+      height: 10%;
+      left: 20%;
+      top: 45%;
+    }
+  }
+  &.plus {
+    &::after {
+      width: 10%;
+      height: 60%;
+      left: 45%;
+      top: 20%;
+    }
   }
 }

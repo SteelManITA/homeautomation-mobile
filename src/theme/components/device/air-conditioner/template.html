@@ -12,9 +12,13 @@
 </div>
 
 <div class="numeric-buttons">
-  <button (click)="dec($event)" [disabled]="model.temperature === 16"><</button>
+  <button (click)="dec($event)" [disabled]="model.temperature === 16">
+    <div class="minus"></div>
+  </button>
   <span class="value">{{ model.temperature }}</span>
-  <button (click)="inc($event)" [disabled]="model.temperature === 30">></button>
+  <button (click)="inc($event)" [disabled]="model.temperature === 30">
+    <div class="plus"></div>
+  </button>
 </div>
 
 <ion-list [(ngModel)]="model.mode" radio-group>
