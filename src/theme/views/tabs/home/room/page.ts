@@ -1,5 +1,5 @@
 import { HomeAutomationRequestService } from '@app/services';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Room } from '@app/server';
 import { NavParams } from 'ionic-angular';
 
@@ -11,9 +11,11 @@ import { AbstractPage } from '@theme/views/AbstractPage';
 })
 export class RoomPage
   extends AbstractPage
+  implements OnInit
 {
   room: Room;
   tab: string;
+  selected: number;
 
   constructor(
     private params: NavParams,
@@ -32,5 +34,10 @@ export class RoomPage
       catch((err) => {
         console.log('fallito', err);
       });
+  }
+
+  ngOnInit(): void
+  {
+    this.selected = (this.room.devices.length > 0) ? this.room.devices[0].id : undefined;
   }
 }
