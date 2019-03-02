@@ -16,7 +16,9 @@
   "device": {
     "default": {
       "send": "Send",
-      "state": "State"
+      "state": "State",
+      "sent": "Sent",
+      "sending-failed": "Sending failed"
     },
     "air_conditioner": {
       "auto": "Auto",
